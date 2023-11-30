@@ -9,7 +9,7 @@ mycol = mydb["testcol"] # select the collection
 # add more attributes to a document
 def add_more_to_document():
     myquery = { "Cusomter_id": "A85123" }
-    newvalues = { "$set": { "Name": "Andreas" } }
+    newvalues = { "$set": { "Name": "Andreas" ,"asdf":"zxcv"} }
 
     x = mycol.update_one(myquery, newvalues)   
 
@@ -21,7 +21,7 @@ def add_more_to_document():
 # change attributes of a document
 def update_document():
     myquery = { "Cusomter_id": "A85123" }
-    newvalues = { "$set": { "Name": "Andreas Kretz" } }
+    newvalues = { "$set": { "Name": "Andreas Kretz"} }
 
     x = mycol.update_one(myquery, newvalues)   
 
